@@ -1,0 +1,19 @@
+{
+    "extensions": [
+        {
+            "icon": "./assets/chrome.svg",
+            "title": "Add to Chrome",
+            "version": "Minimum version 62"
+        },
+        {
+            "icon": "./assets/firefox.svg",
+            "title": "Add to Firefox",
+            "version": "Minimum version 55"
+        },
+        {
+            "icon": "./assets/opera.svg",
+            "title": "Add to Opera",
+            "version": "Minimum version 46"
+        }
+    ]
+}
