@@ -1,0 +1,19 @@
+{
+  "name": "bookmarkmastertailwind",
+  "version": "1.0.0",
+  "description": "project to practice my skills in frontend",
+  "main": "model.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./css/mobile.css -o ./css/tailwind.css --watch"
+  },
+  "keywords": [
+    "html",
+    "tailwindcss",
+    "vanillajs"
+  ],
+  "author": "Hernan Alvarado<hernanvid123@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
+  }
+}
