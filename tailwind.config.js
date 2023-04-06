@@ -7,7 +7,10 @@ module.exports = {
   },
   theme: {
     extend: {
-      height: {
+      spacing: {
+        '0.1': '1rem',
+        '1': '1rem',
+        '1.5': '1.5rem',
         '10': '10rem',
         '50': '50%',
         '90': '90%'
@@ -24,6 +27,7 @@ module.exports = {
         min: '1.2rem',
         xs: '1.4rem',
         sm: '1.6rem',
+        md: '2rem',
         lg: '2.8rem',
         xl: '3.2rem',
         '2xl': '3.8rem'
