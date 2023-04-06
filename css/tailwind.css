@@ -576,8 +576,8 @@ html {
   height: 4.5rem;
 }
 
-.min-h-screen {
-  min-height: 100vh;
+.h-screen {
+  height: 100vh;
 }
 
 .w-90 {
@@ -586,6 +586,10 @@ html {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .flex-col {
@@ -669,4 +673,99 @@ html {
 
 .first-of-type\:border-t-\[1px\]:first-of-type {
   border-top-width: 1px;
+}
+
+@media (min-width: 640px) {
+  .sm\:mt-1 {
+    margin-top: 1rem;
+  }
+
+  .sm\:mt-10 {
+    margin-top: 10rem;
+  }
+
+  .sm\:mt-12 {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .md\:relative {
+    position: relative;
+  }
+
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .md\:ml-6 {
+    margin-left: 1.5rem;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:h-fit {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .md\:w-\[10rem\] {
+    width: 10rem;
+  }
+
+  .md\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .md\:w-85 {
+    width: 85%;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:gap-x-12 {
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+
+  .md\:border-none {
+    border-style: none;
+  }
+
+  .md\:bg-red {
+    --tw-bg-opacity: 1;
+    background-color: hsl(0 94% 66% / var(--tw-bg-opacity));
+  }
+
+  .md\:bg-transparent {
+    background-color: transparent;
+  }
+
+  .md\:text-xs {
+    font-size: 1.4rem;
+  }
+
+  .md\:text-blue-100 {
+    --tw-text-opacity: 1;
+    color: hsl(229 8% 60% / var(--tw-text-opacity));
+  }
+
+  .md\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
 }

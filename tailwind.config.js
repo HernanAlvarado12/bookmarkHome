@@ -7,12 +7,16 @@ module.exports = {
   },
   theme: {
     extend: {
+      screens: {
+        md: '900px'
+      },
       spacing: {
         '0.1': '1rem',
         '1': '1rem',
         '1.5': '1.5rem',
         '10': '10rem',
         '50': '50%',
+        '85': '85%',
         '90': '90%'
       },
       colors: {

@@ -25,22 +25,22 @@
     <body>
         
         <header class ="relative">
-            <nav class ="w-90 h-10 mx-auto flex items-center justify-between">
+            <nav class ="w-90 h-10 mx-auto flex items-center justify-between md:w-85">
                 <img src="./assets/bookmark.svg" alt="logo icon">
-                <img class ="relative z-10" src="./assets/hamburger.svg" alt="menu icon">
-                <menu class ="w-full min-h-screen absolute top-0 left-0 opacity-100 bg-blue-200">
-                    <nav class ="w-90 mx-auto flex items-center flex-col text-white text-md uppercase text-center">
-                        <figure class="w-full h-10 flex items-center justify-between">
+                <img class ="relative z-10 md:hidden" src="./assets/hamburger.svg" alt="menu icon">
+                <menu class ="w-full h-screen absolute top-0 left-0 opacity-100 bg-blue-200 md:w-fit md:h-fit md:relative md:bg-transparent">
+                    <nav class ="w-90 mx-auto flex items-center flex-col text-white text-md uppercase text-center md:w-full md:mx-0 md:text-blue-100 md:text-xs">
+                        <figure class="w-full h-10 flex items-center justify-between md:hidden">
                             <img src="./assets/bookmark-white.svg" alt="logo icon">
                             <img src="./assets/close.svg" alt="close icon">
                         </figure>
-                        <ul class ="w-full">
-                            <li><a class ="w-full py-1.5 block border-blue-100 border-b-[1px] first-of-type:border-t-[1px]" href="">features</a></li>
-                            <li><a class ="w-full py-1.5 block border-blue-100 border-b-[1px]" href="">pricing</a></li>
-                            <li><a class ="w-full py-1.5 block border-blue-100 border-b-[1px]" href="">contact</a></li>
-                            <li><button class ="w-full h-[4.5rem] mt-8 uppercase rounded-sm border-white border-2">login</button></li>
+                        <ul class ="w-full flex flex-col md:flex-row md:gap-x-12">
+                            <li><a class ="w-full py-1.5 block border-blue-100 border-b-[1px] first-of-type:border-t-[1px] md:border-none" href="">features</a></li>
+                            <li><a class ="w-full py-1.5 block border-blue-100 border-b-[1px] md:border-none" href="">pricing</a></li>
+                            <li><a class ="w-full py-1.5 block border-blue-100 border-b-[1px] md:border-none" href="">contact</a></li>
+                            <li><button class ="w-full h-[4.5rem] max-w-2xl mt-8 uppercase rounded-sm border-white border-2 md:w-[10rem] sm:mt-12 md:mt-0 md:ml-6 md:text-white md:bg-red">login</button></li>
                         </ul>
-                        <figure class ="w-full flex items-center justify-center gap-x-12 absolute bottom-24">
+                        <figure class ="w-full flex items-center justify-center gap-x-12 absolute bottom-24 md:hidden">
                             <img src="./assets/facebook.svg" alt="company icon">
                             <img src="./assets/twitter.svg" alt="company icon">
                         </figure>
