@@ -7,6 +7,11 @@ module.exports = {
   },
   theme: {
     extend: {
+      height: {
+        '10': '10rem',
+        '50': '50%',
+        '90': '90%'
+      },
       colors: {
         red: 'hsl(0, 94%, 66%)',
         blue: {
