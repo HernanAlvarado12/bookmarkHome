@@ -50,9 +50,9 @@
         </header>
 
         <main>
-            <figure class ="hidden">
-                <img src ="./assets/hero.svg" alt="hero image">
-                <figcaption class ="w-90 mx-auto mb-48 text-center">
+            <figure class ="w-90 mx-auto md:w-85 md:mt-28 md:mb-10 md:flex md:items-center md:gap-x-12">
+                <img class ="mx-auto md:w-1/2" src ="./assets/hero.svg" alt="hero image" draggable="false" loading="lazy">
+                <figcaption class ="mb-48 text-center md:mb-0 md:-order-1 md:text-start">
                     <h2 class ="text-xl font-medium capitalize">a simple bookmark manager</h2>
                     <p class ="mt-8 mb-12 text-blue-100 text-sm">
                         A clean and simple interface to organize your favourite website. Open a 
@@ -64,29 +64,32 @@
                     </div>
                 </figcaption>
             </figure>
-            <article class ="w-90 mx-auto mb-10 text-center hidden">
-                <h2 class ="text-blue-200 text-lg">Features</h2>
-                <p class ="mt-4 mb-20 text-blue-100 text-sm">
-                    Our aim is to make it quick and easy for you to access your favourite websites. 
-                    Your bookmarks sync between your devices so you can access them on the go.
-                </p>
-                <ul class ="capitalize text-sm">
-                    <li class ="py-5 font-normal border-blue-100 border-y"><a class ="pb-6 border-b-[3px] border-red" href="">simple bookmarking</a></li>
-                    <li class ="py-5 text-blue-100 font-normal border-blue-100 border-b"><a href="">speedy searching</a></li>
-                    <li class ="py-5 text-blue-100 font-normal border-blue-100 border-b"><a href="">easy sharing</a></li>
+            <article class ="w-90 max-w-4xl mx-auto mb-10 text-center">
+                <div class ="md:w-90 md:mx-auto">
+                    <h2 class ="text-blue-200 text-lg">Features</h2>
+                    <p class ="mt-4 mb-20 text-blue-100 text-sm">
+                        Our aim is to make it quick and easy for you to access your favourite websites. 
+                        Your bookmarks sync between your devices so you can access them on the go.
+                    </p>
+                </div>
+                <ul class ="capitalize text-sm md:flex md:items-center md:justify-center">
+                    <li class ="py-5 font-normal border-blue-100 border-y border-t-0 md:flex-1"><a class ="pb-6 border-b-[3px] border-red" href="#">simple bookmarking</a></li>
+                    <li class ="py-5 text-blue-100 font-normal border-blue-100 border-b md:flex-1"><a href="#">speedy searching</a></li>
+                    <li class ="py-5 text-blue-100 font-normal border-blue-100 border-b md:flex-1"><a href="#">easy sharing</a></li>
                 </ul>
             </article>
-            <figure class ="w-90 mx-auto mb-48 hidden">
-                <img class ="w-full" src="./assets/features-tab-1.svg" alt="hero picture">
-                <figcaption class ="text-center">
+            <figure class ="w-90 mx-auto mb-48 md:w-85 md:flex md:items-center md:gap-x-12">
+                <img class ="w-full md:w-1/2" src="./assets/features-tab-1.svg" alt="hero picture" draggable="false" loading="lazy">
+                <figcaption class ="text-center md:text-start">
                     <h2 class ="mt-12 mb-4 text-blue-200 text-lg">Bookmark in one click</h2>
-                    <p class ="text-blue-100 text-sm">
+                    <p class ="text-blue-100 text-sm md:mb-12">
                         Organize your bookmarks however you like. Our simple drag-and-drop interface 
                         gives you complete control over how you manage your favourite sites.
                     </p>
+                    <button class ="w-10 h-16 hidden text-white text-xs font-medium rounded-xs bg-blue md:block">More Info</button>
                 </figcaption>
             </figure>
-            <section class ="w-90 mx-auto mb-10 text-center hidden">
+            <section class ="w-90 mx-auto mb-10 text-center md:mb-60 lg:mb-80">
                 <article>
                     <h3 class ="text-blue-200 text-lg">Download the extension</h3>
                     <p class ="mt-1 mb-12 text-blue-100 text-sm">
@@ -94,19 +97,19 @@
                         got a favourite you’d like us to prioritize.
                     </p>
                 </article>
-                <section class ="w-90 mx-auto flex items-center flex-col gap-y-12" id="extensionSection">
+                <section class ="w-90 mx-auto flex items-center justify-center flex-col gap-12 sm:grid sm:grid-cols-2 lg:grid-cols-3" id="extensionSection">
                     <template id="extensionTemplate">
-                        <article class ="w-full p-8 pt-12 flex items-center justify-center flex-col relative shadow-2xl rounded-lg bg-slate-50">
+                        <article class ="w-full max-w-3xl p-8 pt-12 flex items-center justify-center flex-col relative shadow-2xl rounded-lg bg-slate-50 lg:odd:translate-y-12 lg:last:translate-y-24">
                             <img class ="aspect-square" alt="company icon" draggable="false" loading="lazy">
                             <h4 class ="mt-12 text-blue-200 text-md"></h4>
                             <p class ="text-blue-100 text-xs"></p>
-                            <img class ="w-full absolute bottom-36" src="./assets/dots.svg" alt="points picture">
+                            <img class ="w-full absolute bottom-36" src="./assets/dots.svg" alt="points picture" draggable="false" loading="lazy">
                             <button class ="w-full h-4.5 mt-24 text-white text-sm font-normal rounded-sm bg-blue">Add & install Extension</button>
                         </article>
                     </template>
                 </section>
             </section>
-            <section class ="w-90 mx-auto mb-10">
+            <section class ="w-90 mx-auto mb-10 md:max-w-4xl md:mb-60">
                 <article class ="text-center">
                     <h3 class ="text-blue-100 text-lg">Frequently Asked Questions</h3>
                     <p class ="mt-1 mb-16 text-blue-100 text-sm">
@@ -118,7 +121,7 @@
                     <template id ="questionTemplate">
                         <article>
                             <figure class ="py-8 flex items-center justify-between flex-row-reverse border-blue-100 border-b">    
-                                <img src="./assets/arrow.svg" alt="arrow icon">
+                                <img src="./assets/arrow.svg" alt="arrow icon" draggable="false" loading="lazy">
                                 <figcaption class ="text-blue-200 text-sm font-normal cursor-pointer" id ="questionTitle"></figcaption>
                             </figure>
                         </article>
@@ -127,7 +130,7 @@
                 <button class ="w-40 h-4.5 mx-auto block text-white text-sm font-normal rounded-xs bg-blue">More Info</button>
             </section>
             <section class ="bg-blue">
-                <article class ="w-90 mx-auto py-28 text-white text-center">
+                <article class ="w-90 max-w-2xl mx-auto py-28 text-white text-center md:py-36">
                     <p class ="text-sm font-normal uppercase">35,000+ already joined</p>
                     <h4 class ="mb-12 text-[2.4rem] font-medium">Stay up-to-date with what we’re doing</h4>
                     <form class ="flex flex-col gap-y-6">
