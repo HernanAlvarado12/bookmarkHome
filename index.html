@@ -59,8 +59,8 @@
                         new browser tab and see your sites load instantly. Try it for free.
                     </p>
                     <div class="flex items-center gap-x-8 text-sm">
-                        <button class="flex-1 h-16 text-white font-medium rounded-xs bg-blue">Get it on Chrome</button>
-                        <button class="flex-1 h-16 font-medium shadow-2xl rounded-xs bg-blue-50">Get it on Firefox</button>
+                        <button class="flex-1 h-16 text-white font-medium rounded-xs border-transparent border-2 outline-none bg-blue hover:text-blue hover:border-blue hover:bg-white">Get it on Chrome</button>
+                        <button class="flex-1 h-16 text-blue-200 font-medium shadow-2xl rounded-xs border-transparent border-2 outline-none hover:border-blue-200 hover:bg-white">Get it on Firefox</button>
                     </div>
                 </figcaption>
             </figure>
@@ -72,10 +72,13 @@
                         Your bookmarks sync between your devices so you can access them on the go.
                     </p>
                 </div>
-                <ul class ="capitalize text-sm md:flex md:items-center md:justify-center">
-                    <li class ="py-5 font-normal border-blue-100 border-y border-t-0 md:flex-1"><a class ="pb-6 border-b-[3px] border-red" href="#">simple bookmarking</a></li>
-                    <li class ="py-5 text-blue-100 font-normal border-blue-100 border-b md:flex-1"><a href="#">speedy searching</a></li>
-                    <li class ="py-5 text-blue-100 font-normal border-blue-100 border-b md:flex-1"><a href="#">easy sharing</a></li>
+                <ul class ="capitalize text-sm md:flex md:items-center md:justify-center" id ="listFeatures">
+                    <li class ="py-5 relative text-blue-100 font-normal border-blue-100 cursor-pointer border-y border-t-0 hover:text-red md:flex-1 features-line">
+                        <span class ="w-7/12 max-w-3xl h-[2px] mx-auto block absolute bottom-0 inset-x-0 bg-red"></span>
+                        simple bookmarking
+                    </li>
+                    <li class ="py-5 relative text-blue-100 font-normal cursor-pointer border-blue-100 border-b hover:text-red md:flex-1">speedy searching</li>
+                    <li class ="py-5 relative text-blue-100 font-normal cursor-pointer border-blue-100 border-b hover:text-red md:flex-1">easy sharing</li>
                 </ul>
             </article>
             <figure class ="w-90 mx-auto mb-48 md:w-85 md:flex md:items-center md:gap-x-12">
@@ -99,19 +102,19 @@
                 </article>
                 <section class ="w-90 mx-auto flex items-center justify-center flex-col gap-12 sm:grid sm:grid-cols-2 lg:grid-cols-3" id="extensionSection">
                     <template id="extensionTemplate">
-                        <article class ="w-full max-w-3xl p-8 pt-12 flex items-center justify-center flex-col relative shadow-2xl rounded-lg bg-slate-50 lg:odd:translate-y-12 lg:last:translate-y-24">
+                        <article class ="w-full max-w-3xl p-8 pt-12 flex items-center justify-center flex-col relative shadow-2xl rounded-lg bg-slate-50 md:p-12 md:mt-20 lg:odd:translate-y-12 lg:last:translate-y-24">
                             <img class ="aspect-square" alt="company icon" draggable="false" loading="lazy">
                             <h4 class ="mt-12 text-blue-200 text-md"></h4>
                             <p class ="text-blue-100 text-xs"></p>
                             <img class ="w-full absolute bottom-36" src="./assets/dots.svg" alt="points picture" draggable="false" loading="lazy">
-                            <button class ="w-full h-4.5 mt-24 text-white text-sm font-normal rounded-sm bg-blue">Add & install Extension</button>
+                            <button class ="w-full h-4.5 mt-24 text-white text-sm font-normal rounded-sm border-transparent border-2 outline-none bg-blue hover:text-blue hover:border-blue hover:bg-white">Add & install Extension</button>
                         </article>
                     </template>
                 </section>
             </section>
             <section class ="w-90 mx-auto mb-10 md:max-w-4xl md:mb-60">
                 <article class ="text-center">
-                    <h3 class ="text-blue-100 text-lg">Frequently Asked Questions</h3>
+                    <h3 class ="text-blue-200 text-lg">Frequently Asked Questions</h3>
                     <p class ="mt-1 mb-16 text-blue-100 text-sm">
                         Here are some of our FAQs. If you have any other questions you’d like 
                         answered please feel free to email us.
@@ -119,10 +122,11 @@
                 </article>
                 <section class ="mb-12" id ="questionSection">
                     <template id ="questionTemplate">
-                        <article>
-                            <figure class ="py-8 flex items-center justify-between flex-row-reverse border-blue-100 border-b">    
-                                <img src="./assets/arrow.svg" alt="arrow icon" draggable="false" loading="lazy">
+                        <article class="cursor-pointer">
+                            <figure class ="py-8 flex items-center justify-between flex-row-reverse flex-wrap border-blue-100 border-b">    
+                                <img class ="transition-all duration-300" src="./assets/arrow.svg" alt="arrow icon" draggable="false" loading="lazy">
                                 <figcaption class ="text-blue-200 text-sm font-normal cursor-pointer" id ="questionTitle"></figcaption>
+                                <figcaption class ="w-full mt-12 hidden text-blue-100 text-sm origin-top transition-all duration-700" id ="questionAnswer"></figcaption>
                             </figure>
                         </article>
                     </template>
@@ -134,8 +138,12 @@
                     <p class ="text-sm font-normal uppercase">35,000+ already joined</p>
                     <h4 class ="mb-12 text-[2.4rem] font-medium">Stay up-to-date with what we’re doing</h4>
                     <form class ="flex flex-col gap-y-6">
-                        <input class ="h-4.5 text-blue-100 text-sm indent-1 outline-none rounded-xs placeholder:text-blue-100" type ="email" placeholder ="Enter your email address">
-                        <input class ="h-4.5 text-sm font-medium rounded-xs bg-red" type ="submit" value ="Contact Us">
+                        <label class ="flex items-center relative">
+                            <img class ="hidden absolute right-1" src="./assets/error.svg" alt="">
+                            <span class ="w-full h-[2.5rem] hidden text-white text-xs italic absolute -bottom-8 rounded-b-xs bg-red">Whoops, make sure it's an email</span>
+                            <input class ="w-full h-4.5 text-blue-100 text-sm indent-1 border-transparent border-2 outline-none rounded-xs placeholder:text-blue-100" name ="email" type ="text" placeholder ="Enter your email address" autocomplete="email">
+                        </label>
+                        <input class ="h-4.5 text-sm font-medium relative z-10 rounded-xs transition-all duration-300 bg-red" type ="submit" value ="Contact Us">
                     </form>
                 </article>
             </section>
