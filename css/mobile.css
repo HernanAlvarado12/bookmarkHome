@@ -15,6 +15,20 @@
         font-family: 'Rubik', sans-serif;
     }
 
+    body::-webkit-scrollbar {
+        width: 0.7rem;
+    }
+
+    body::-webkit-scrollbar-track {
+        margin-block: 0.2rem;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        width: 8rem;
+        border-radius: 1rem;
+        background-color: hsl(229, 31%, 21%);
+    }
+
     #listFeatures > li.features-line {
         color: hsl(229, 31%, 21%);
     }
