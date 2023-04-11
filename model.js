@@ -131,6 +131,8 @@ document.addEventListener('click', event => {
         document.querySelector('form.flex label span').classList.add('hidden')
         document.querySelector('form.flex label img').classList.add('hidden')
         document.querySelector('form.flex > input:last-child').classList.remove('translate-y-8')
+    }else if(event.target.matches('header > nav > img#iconMenu')) {
+        event.target.nextElementSibling.classList.toggle('hidden')
     }
 })
 

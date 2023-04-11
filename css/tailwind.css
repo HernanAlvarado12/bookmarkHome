@@ -1042,12 +1042,38 @@ html {
     margin-top: 3rem;
   }
 
+  .sm\:mr-auto {
+    margin-right: auto;
+  }
+
+  .sm\:ml-20 {
+    margin-left: 5rem;
+  }
+
   .sm\:grid {
     display: grid;
   }
 
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
+
+  .sm\:gap-x-12 {
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+
+  .sm\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 

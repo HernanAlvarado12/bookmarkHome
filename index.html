@@ -27,7 +27,7 @@
         <header class ="relative">
             <nav class ="w-90 h-10 mx-auto flex items-center justify-between md:w-85">
                 <img src="./assets/bookmark.svg" alt="logo icon">
-                <img class ="relative z-10 md:hidden" src="./assets/hamburger.svg" alt="menu icon">
+                <img class ="relative z-10 md:hidden" id="iconMenu" src="./assets/hamburger.svg" alt="menu icon">
                 <menu class ="w-full h-screen hidden absolute top-0 left-0 opacity-100 bg-blue-200 md:w-fit md:h-fit md:relative md:bg-transparent">
                     <nav class ="w-90 mx-auto flex items-center flex-col text-white text-md uppercase text-center md:w-full md:mx-0 md:text-blue-100 md:text-xs">
                         <figure class="w-full h-10 flex items-center justify-between md:hidden">
@@ -35,9 +35,9 @@
                             <img src="./assets/close.svg" alt="close icon">
                         </figure>
                         <ul class ="w-full flex flex-col md:flex-row md:gap-x-12">
-                            <li><a class ="w-full py-1.5 block border-blue-100 border-b-[1px] first-of-type:border-t-[1px] md:border-none" href="">features</a></li>
-                            <li><a class ="w-full py-1.5 block border-blue-100 border-b-[1px] md:border-none" href="">pricing</a></li>
-                            <li><a class ="w-full py-1.5 block border-blue-100 border-b-[1px] md:border-none" href="">contact</a></li>
+                            <li><a class ="w-full py-1.5 block border-blue-100 border-b first-of-type:border-t-[1px] md:border-none" href="#">features</a></li>
+                            <li><a class ="w-full py-1.5 block border-blue-100 border-b md:border-none" href="#">pricing</a></li>
+                            <li><a class ="w-full py-1.5 block border-blue-100 border-b md:border-none" href="#">contact</a></li>
                             <li><button class ="w-full h-[4.5rem] max-w-2xl mt-8 uppercase rounded-sm border-white border-2 md:w-[10rem] sm:mt-12 md:mt-0 md:ml-6 md:text-white md:bg-red">login</button></li>
                         </ul>
                         <figure class ="w-full flex items-center justify-center gap-x-12 absolute bottom-24 md:hidden">
@@ -150,9 +150,9 @@
         </main>
 
         <footer class ="w-full bg-blue-200">
-            <nav class ="w-90 mx-auto py-24 flex items-center justify-center flex-col gap-y-16">
+            <nav class ="w-90 mx-auto py-24 flex items-center justify-center flex-col gap-y-16 sm:py-16 sm:flex-row sm:justify-between">
                 <img src ="./assets/bookmark-white.svg" alt ="logo icon">
-                <ul class ="flex items-center flex-col gap-y-6 uppercase">
+                <ul class ="flex items-center flex-col gap-y-6 uppercase sm:mr-auto sm:ml-20 sm:flex-row sm:gap-x-12">
                     <li><a class ="text-blue-100 text-sm font-medium" href ="#">features</a></li>
                     <li><a class ="text-blue-100 text-sm font-medium" href ="#">pricing</a></li>
                     <li><a class ="text-blue-100 text-sm font-medium" href ="#">contact</a></li>
